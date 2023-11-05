@@ -69,11 +69,11 @@ to(2, '1', 2)
 ```
 The alphabet is automatically inferred by the symbols that appear in the given transitions (in this case, it is `{'0', '1'}`). Then, calling `nfa.to_graphviz("nfa.png")` creates the image above.
 ### DFA
-Creating a DFA is basically the same as an NFA, just use `reglib.dfa.DFA` instead of `reglib.nfa.NFA`. The only differences are that DFAs have the following additional restrictions:
+Creating a DFA is basically the same as an NFA, just use `reglib.dfa.Dfa` instead of `reglib.nfa.Nfa`. The only differences are that DFAs have the following additional restrictions:
 * Cannot create ε-transitions (i.e. `to(..., EPS, ...)`)
 * Exactly one transition must be defined on each state and symbol in the alphabet
 ### Regular Expression
-Regular expression are defined by the following BNF:
+Regular expressions are defined by the following BNF:
 ```
 <union-expr>  ::= <union-expr>'|'<concat-expr> | <concat-expr>
 <concat-expr> ::= <concat-expr><star-expr> | <star-expr>
