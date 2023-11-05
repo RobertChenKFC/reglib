@@ -1,0 +1,6 @@
+reglib.egg-info/
+venv/
+**/.pytest-cache/
+**/__pycache__/
+**/tmux-client*.log
+**/*.swp
